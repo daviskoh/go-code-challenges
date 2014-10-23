@@ -1,5 +1,9 @@
 package index_of
 
 func IndexOf(mainString, substring string) int {
-	return 1
+	if mainString == substring {
+		return 0
+	}
+
+	return -1
 }

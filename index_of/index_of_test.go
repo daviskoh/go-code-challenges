@@ -14,6 +14,10 @@ import (
 
 var _ = Describe("IndexOf", func() {
 	It("should handle a simple case with a 1 char string", func() {
-		Expect(IndexOf("a", "a")).To(Equal(1))
+		Expect(IndexOf("a", "a")).To(Equal(0))
+	})
+
+	It("should return -1 if string does not contain substring", func() {
+		Expect(IndexOf("a", "b")).To(Equal(-1))
 	})
 })
