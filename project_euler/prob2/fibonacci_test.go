@@ -33,4 +33,9 @@ var _ = Describe("Fibonacci", func() {
 		Expect(Fibonacci(4)).To(Equal(5))
 		Expect(Fibonacci(5)).To(Equal(8))
 	})
+
+	It("handles double digit numbers", func() {
+		Expect(Fibonacci(6)).To(Equal(13))
+		Expect(Fibonacci(8)).To(Equal(34))
+	})
 })
