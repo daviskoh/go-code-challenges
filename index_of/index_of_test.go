@@ -1,8 +1,6 @@
 package index_of_test
 
 import (
-	"fmt"
-
 	. "github.com/daviskoh/go-code-challenges/index_of"
 
 	. "github.com/onsi/ginkgo"
@@ -29,12 +27,7 @@ var _ = Describe("IndexOf", func() {
 	})
 
 	It("should handle multi char substrings", func() {
-		fmt.Println("***********************************")
-		fmt.Println("MULTI")
 		Expect(IndexOf("azbcasdf", "bc", 0)).To(Equal(2))
-
-		fmt.Println("***********************************")
-		fmt.Println("MULTI")
 		Expect(IndexOf("zzzzzzz", "bc", 0)).To(Equal(-1))
 	})
 })

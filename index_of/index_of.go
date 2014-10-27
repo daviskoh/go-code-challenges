@@ -5,6 +5,10 @@ func IndexOf(mainString, substring string, currentIndex int) int {
 		return -1
 	}
 
+	// NOTE: golang taking substring of string w/ [a:b]
+	// will take all elements between range a & b
+	// ex. "dude"[0:4] //=> "dude"
+	// ex. "dude"[0:3] //=> "dud"
 	if mainString[currentIndex:currentIndex+len(substring)] == substring {
 		return currentIndex
 	}
