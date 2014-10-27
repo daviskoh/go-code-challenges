@@ -30,4 +30,8 @@ var _ = Describe("Prob1", func() {
 	It("handles example from question", func() {
 		Expect(Prob1(10)).To(Equal(23))
 	})
+
+	It("should get answer to question", func() {
+		Expect(Prob1(1000)).To(Equal(233168))
+	})
 })
