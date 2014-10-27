@@ -7,7 +7,7 @@ import (
 	. "github.com/onsi/gomega"
 )
 
-// 1, 2, 3, 4, 5
+// 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
 // 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
 var _ = Describe("FibonacciSumEven", func() {
 	It("should handle base case 1", func() {
@@ -20,5 +20,9 @@ var _ = Describe("FibonacciSumEven", func() {
 
 	It("should complex single digit case", func() {
 		Expect(FibonacciSum(5)).To(Equal(8 + 2))
+	})
+
+	It("should complex double digit case", func() {
+		Expect(FibonacciSum(11)).To(Equal(2 + 8 + 34 + 144))
 	})
 })
