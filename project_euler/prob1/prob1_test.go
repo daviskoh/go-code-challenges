@@ -26,4 +26,8 @@ var _ = Describe("Prob1", func() {
 	It("handles a value with 1 multiple of 3 & 1 multiple of 5", func() {
 		Expect(Prob1(6)).To(Equal(3 + 5))
 	})
+
+	It("handles example from question", func() {
+		Expect(Prob1(10)).To(Equal(23))
+	})
 })
