@@ -16,14 +16,14 @@ import (
 
 var _ = Describe("Prob1", func() {
 	It("handles a simple case w/ 1 multiple of 3", func() {
-		Expect(Prob1(3)).To(Equal(3))
+		Expect(Prob1(3)).To(Equal(0))
 	})
 
 	It("handles a simple case w/ 1 multiple of 5", func() {
-		Expect(Prob1(5)).To(Equal(5))
+		Expect(Prob1(5)).To(Equal(3))
 	})
 
-	XIt("handles a value with 1 multiple of 3 & 1 multiple of 5", func() {
+	It("handles a value with 1 multiple of 3 & 1 multiple of 5", func() {
 		Expect(Prob1(6)).To(Equal(3 + 5))
 	})
 })
