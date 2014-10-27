@@ -20,4 +20,17 @@ var _ = Describe("Fibonacci", func() {
 	It("considers a sequence to start at 1", func() {
 		Expect(Fibonacci(1)).To(Equal(1))
 	})
+
+	It("considers 2 as the next value", func() {
+		Expect(Fibonacci(2)).To(Equal(2))
+	})
+
+	It("handles a simple case", func() {
+		Expect(Fibonacci(3)).To(Equal(3))
+	})
+
+	It("handles a slightly more complex case", func() {
+		Expect(Fibonacci(4)).To(Equal(5))
+		Expect(Fibonacci(5)).To(Equal(8))
+	})
 })
