@@ -1,10 +1,14 @@
 package pig_latin
 
-var Vowels = [5]string{"a", "e", "i", "o", "u"}
+import (
+	"strings"
+)
+
+var Vowels = "aeiou"
 
 func indexOfVowel(word string) int {
 	for i, letter := range word {
-		if isVowel(string(letter)) {
+		if strings.Contains(Vowels, string(letter)) {
 			return i
 		}
 	}
@@ -12,30 +16,20 @@ func indexOfVowel(word string) int {
 	return -1
 }
 
-func isVowel(letter string) bool {
-	for _, vowel := range Vowels {
-		if vowel == letter {
-			return true
-		}
-	}
-
-	return false
-}
-
 func PigLatin(word string) string {
 	if len(word) == 0 {
 		return word
 	}
 
-	startingLetter := word[0:1]
-	if isVowel(startingLetter) || startingLetter == "y" {
+	// find index of 1st vowel
+	index := indexOfVowel(word)
+
+	if index == 0 || word[0:1] == "y" {
 		return word + "way"
 	}
 
-	// find index of 1st vowel
-	// move string.substring(startingLetter, index) to end of string
-	index := indexOfVowel(word)
 	if index != -1 {
+		// move string.substring(startingLetter, index) to end of string
 		word = word[index:] + word[0:index]
 	}
 
