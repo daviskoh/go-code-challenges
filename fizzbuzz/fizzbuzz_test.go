@@ -26,4 +26,8 @@ var _ = Describe("Fizzbuzz", func() {
 	It("handles a simple num divisible by y", func() {
 		Expect(FizzBuzz("9", "3", "6")).To(Equal("B"))
 	})
+
+	It("handles 0", func() {
+		Expect(FizzBuzz("2", "3", "0")).To(Equal("0"))
+	})
 })
