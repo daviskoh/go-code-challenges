@@ -1,7 +1,7 @@
 package fizzbuzz_test
 
 import (
-	. "github.com/daviskoh/go-code-challenges/fizzbuzz"
+	. "github.com/daviskoh/go-code-challenges/fizzbuzz/fizzbuzz"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
